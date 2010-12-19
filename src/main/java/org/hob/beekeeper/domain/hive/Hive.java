@@ -4,7 +4,6 @@ import java.util.Stack;
 
 /**
  * Represents a beehive.
- * 
  */
 public class Hive 
 {

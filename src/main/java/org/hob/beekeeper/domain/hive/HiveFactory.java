@@ -2,17 +2,13 @@ package org.hob.beekeeper.domain.hive;
 
 import java.util.Stack;
 
-import javax.enterprise.inject.Model;
-
-@Model
 public class HiveFactory
 {
-  public Hive createClassic()
+  public static Hive createClassic()
   {
-	HiveBodyComponent component = new HiveBodyComponent();
+	HiveBodyComponent component = new BodyComponentFactory().createClassic();
 	Stack<HiveBodyComponent> stack = new Stack<HiveBodyComponent>();
-	
-	//return new Hive(new Stand(),
-	return null;
+	stack.add(component);
+	return new Hive(new Stand(), new BottomBoard(), stack, new InnerCover(), new OuterCover());
   }
 }

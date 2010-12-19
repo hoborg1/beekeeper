@@ -1,5 +1,9 @@
 package org.hob.beekeeper.domain.hive;
 
-public class CombCellSector {
+/**
+ * Represents a comb cell sector. A sector consists of areas.
+ */
+public class CombCellSector 
+{
 
 }

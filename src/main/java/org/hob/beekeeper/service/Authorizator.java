@@ -1,14 +1,21 @@
 package org.hob.beekeeper.service;
 
-import org.hob.beekeeper.system.command.AuthCommand;
+import javax.ejb.Stateless;
+import javax.inject.Named;
+
+import org.hob.beekeeper.PagesConst;
 
 /**
  * Service responsible for authorizing users.
  */
+@Named
+@Stateless
 public class Authorizator
 {
-  public void authorize(AuthCommand authCommand)
+  public String authorize(String name, String password)
   {
-	// Here: request user auth data from DAO and compare hashed passwords
+	// AuthCommand command = new AuthCommand(name, password);
+	// TODO Here: request user auth data from DAO and compare hashed passwords
+	return PagesConst.PAGE_ID_MAIN;
   }
 }

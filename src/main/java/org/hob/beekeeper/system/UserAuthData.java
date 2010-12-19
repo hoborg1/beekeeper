@@ -1,12 +1,20 @@
 package org.hob.beekeeper.system;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
 /**
  * Represents user authorization data.
  */
+@Entity
 public class UserAuthData
 {
+  @Id
   Long userId;
-  private String passMD5;
+  
+  @Column
+  String passMD5;
   
   public boolean equalsMD5(String md5)
   {
